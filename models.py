@@ -28,14 +28,14 @@ class Invoice(Base):
 
 
 def create_db():
-    url = "postgres:///invoices"
+    url = "postgres://rgoucqeeukzkww:2ef63a2930b664556ec73b8671dd633d6d8d9acc32fc73e94590096769d1c166@ec2-46-137-84-173.eu-west-1.compute.amazonaws.com:5432/dbi2grgbsipj1l"
     #url = "sqlite:///invoice_db.sqlite"
     engine = create_engine(url)
     Base.metadata.create_all(engine)
 
 
 def get_session():
-    url = "postgres:///invoices"
+    url = "postgres://rgoucqeeukzkww:2ef63a2930b664556ec73b8671dd633d6d8d9acc32fc73e94590096769d1c166@ec2-46-137-84-173.eu-west-1.compute.amazonaws.com:5432/dbi2grgbsipj1l"
     #url = "sqlite:///invoice_db.sqlite"
     engine = create_engine(url)
     Session = sessionmaker(bind=engine)
